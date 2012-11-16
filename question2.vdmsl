@@ -4,5 +4,8 @@ definitions
 	functions
 	square_seq: seq of int -> seq of int
 	square_seq(x) == [x(i) * x(i) | i in set inds x];
+	
+	extract_odd_seq: seq of int -> seq of int
+	extract_odd_seq(x) == [x(i) | i in set inds x & x(i) mod 2 = 1];
 
 end question2
