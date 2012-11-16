@@ -1,0 +1,8 @@
+module question2
+exports all
+definitions 
+	functions
+	square_seq: seq of int -> seq of int
+	square_seq(x) == [x(i) * x(i) | i in set inds x];
+
+end question2

@@ -1,0 +1,15 @@
+module question1
+exports all
+definitions 
+	types 
+	functions 
+	square: set of nat -> set of nat
+	square(s) == {n*n | n in set s};
+
+	extract_even: set of nat -> set of nat
+	extract_even(s) == {n | n in set s & n mod 2 = 0};
+	
+	no_of_even: set of nat -> nat
+	no_of_even(s) == card {n | n in set s & n mod 2 = 0};
+
+end question1
