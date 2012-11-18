@@ -1,0 +1,17 @@
+module question4
+exports all
+definitions 
+	types
+	bag = map char to nat  -- バッグ型は文字からその文字の数への写像
+	functions
+	count: bag * char -> nat
+	count(b,c) == if c in set dom(b) then b(c) else 0;
+
+	bagdiff: bag * bag -> bag
+	bagdiff(b1, b2) == 
+	{ c |-> count(b1,c) - count(b2,c) | c in set dom(b1) union dom(b2)  -- b1とb2の定義域に含まれる定義c 
+			& count(b1,c) > count(b2,c)};								-- b1の定義がb2より多い
+			
+	items: seq of char -> bag
+	items(l) == { c |-> len [c | i in set inds l & l(i) = c] | c in set elems l};
+end question4
