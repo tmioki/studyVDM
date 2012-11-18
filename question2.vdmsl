@@ -8,11 +8,12 @@ definitions
 	extract_odd_seq: seq of int -> seq of int
 	extract_odd_seq(x) == [x(i) | i in set inds x & x(i) mod 2 = 1];
 	
---  (3)は解らなかった
---	reverse_seq: seq of int -> seq of int
---	reverse_seq(x) == 
---			if x=[]
---			then []
---			else  
+	reverse_seq: seq of int -> seq of int
+	reverse_seq(x) == 
+			if x=[]
+			then []
+			else  reverse_seq(tl(x)) ^ [x(1)]	-- tl(x)	: リストxから先頭を覗いたリスト
+												-- ^		: リストの連結
+												-- x(n)		: リストのn番目の要素
 
 end question2
