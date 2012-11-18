@@ -7,5 +7,12 @@ definitions
 	
 	extract_odd_seq: seq of int -> seq of int
 	extract_odd_seq(x) == [x(i) | i in set inds x & x(i) mod 2 = 1];
+	
+--  (3)‚Í‰ð‚ç‚È‚©‚Á‚½
+--	reverse_seq: seq of int -> seq of int
+--	reverse_seq(x) == 
+--			if x=[]
+--			then []
+--			else  
 
 end question2
