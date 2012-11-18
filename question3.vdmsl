@@ -1,0 +1,22 @@
+module question3
+exports all
+definitions 
+	types
+	queue = seq of nat;
+	 
+	values
+	empty = []
+	
+	functions 
+	enqueue: queue * nat -> queue
+	enqueue(q,x) == q ^ [x];
+	
+	dequeue: queue -> queue
+	dequeue(q) == tl(q)
+	pre q <> empty;
+	
+	front: queue -> nat
+	front(q) == q(1)
+	pre q <> empty;
+	
+end question3
